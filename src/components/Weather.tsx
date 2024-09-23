@@ -49,7 +49,8 @@ export default function Weather() {
   const [weatherData, setWeatherData] = useState<WeatherData>();
   const [searchinput, setSearchinput] = useState("");
 
-  const [forecastData, setForecastData] = useState();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [forecastData, setForecastData] = useState<any[]>();
 
   useEffect(() => {
     const forecast = async (city: string) => {
